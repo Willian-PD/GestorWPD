@@ -24,7 +24,7 @@ namespace Control
             }
         }
 
-        public  Dictionary<Int64, Pessoa> ListarPessoasDoArquivo()
+        public  Dictionary<String, Pessoa> ListarPessoasDoArquivo()
         {
             try
             {

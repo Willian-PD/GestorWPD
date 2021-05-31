@@ -44,7 +44,7 @@ namespace View
             bool resultado = false;
             try
             {
-                if (_user.Usuario.Equals("thiago") && _user.Senha.Equals("thiago"))
+                if (_user.Usuario.Equals("willian") && _user.Senha.Equals("willian"))
                 {
                     resultado = true;
                 }

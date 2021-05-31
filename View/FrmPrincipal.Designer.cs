@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.mnsPrincipal = new System.Windows.Forms.MenuStrip();
             this.itmArquivo = new System.Windows.Forms.ToolStripMenuItem();
             this.itmNovo = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,8 +43,13 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.itsUsuarioLogado = new System.Windows.Forms.ToolStripStatusLabel();
             this.barraTarefas = new System.Windows.Forms.ToolStrip();
-            this.tsbCadastrar = new System.Windows.Forms.ToolStripButton();
             this.itsListarUsuarios = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.relogio = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mnsPrincipal.SuspendLayout();
@@ -59,7 +65,7 @@
             this.itmAbrir});
             this.mnsPrincipal.Location = new System.Drawing.Point(0, 0);
             this.mnsPrincipal.Name = "mnsPrincipal";
-            this.mnsPrincipal.Size = new System.Drawing.Size(1128, 24);
+            this.mnsPrincipal.Size = new System.Drawing.Size(674, 24);
             this.mnsPrincipal.TabIndex = 0;
             this.mnsPrincipal.Text = "menuStrip1";
             // 
@@ -77,19 +83,19 @@
             // 
             this.itmNovo.Name = "itmNovo";
             this.itmNovo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.itmNovo.Size = new System.Drawing.Size(180, 22);
+            this.itmNovo.Size = new System.Drawing.Size(146, 22);
             this.itmNovo.Text = "Novo";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
             // 
             // itmSair
             // 
             this.itmSair.Name = "itmSair";
             this.itmSair.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.itmSair.Size = new System.Drawing.Size(180, 22);
+            this.itmSair.Size = new System.Drawing.Size(146, 22);
             this.itmSair.Text = "Sair";
             // 
             // itmAbrir
@@ -121,9 +127,9 @@
             this.itsRelogio,
             this.toolStripStatusLabel1,
             this.itsUsuarioLogado});
-            this.barraStatus.Location = new System.Drawing.Point(0, 545);
+            this.barraStatus.Location = new System.Drawing.Point(0, 452);
             this.barraStatus.Name = "barraStatus";
-            this.barraStatus.Size = new System.Drawing.Size(1128, 22);
+            this.barraStatus.Size = new System.Drawing.Size(674, 22);
             this.barraStatus.TabIndex = 1;
             this.barraStatus.Text = "Barra de Status";
             // 
@@ -150,24 +156,18 @@
             this.barraTarefas.Dock = System.Windows.Forms.DockStyle.Left;
             this.barraTarefas.ImageScalingSize = new System.Drawing.Size(50, 50);
             this.barraTarefas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbCadastrar,
-            this.itsListarUsuarios});
+            this.itsListarUsuarios,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripButton5,
+            this.toolStripButton6});
             this.barraTarefas.Location = new System.Drawing.Point(0, 24);
             this.barraTarefas.Name = "barraTarefas";
-            this.barraTarefas.Size = new System.Drawing.Size(55, 521);
+            this.barraTarefas.Size = new System.Drawing.Size(55, 428);
             this.barraTarefas.TabIndex = 2;
             this.barraTarefas.Text = "Barra de Tarefas";
-            // 
-            // tsbCadastrar
-            // 
-            this.tsbCadastrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbCadastrar.Image = global::View.Properties.Resources.add_user_2;
-            this.tsbCadastrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCadastrar.Name = "tsbCadastrar";
-            this.tsbCadastrar.Size = new System.Drawing.Size(52, 54);
-            this.tsbCadastrar.Text = "toolStripButton1";
-            this.tsbCadastrar.ToolTipText = "Cadastrar um Novo Usuário no Banco de Dados";
-            this.tsbCadastrar.Click += new System.EventHandler(this.tsbCadastrar_Click);
             // 
             // itsListarUsuarios
             // 
@@ -179,6 +179,66 @@
             this.itsListarUsuarios.Text = "Listar Usuários";
             this.itsListarUsuarios.ToolTipText = "Listar Usuários do Banco de Dados";
             this.itsListarUsuarios.Click += new System.EventHandler(this.itsListarUsuarios_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(52, 54);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(52, 54);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(52, 54);
+            this.toolStripButton3.Text = "toolStripButton3";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(52, 54);
+            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(52, 54);
+            this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(52, 54);
+            this.toolStripButton6.Text = "toolStripButton6";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // relogio
             // 
@@ -192,7 +252,7 @@
             this.pictureBox1.Image = global::View.Properties.Resources.logo_lasalle;
             this.pictureBox1.Location = new System.Drawing.Point(55, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1073, 521);
+            this.pictureBox1.Size = new System.Drawing.Size(619, 428);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -201,7 +261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1128, 567);
+            this.ClientSize = new System.Drawing.Size(674, 474);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.barraTarefas);
             this.Controls.Add(this.barraStatus);
@@ -210,7 +270,7 @@
             this.MainMenuStrip = this.mnsPrincipal;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Aplicação de Aula da Disciplina CPTI";
+            this.Text = "GetorWPD";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.mnsPrincipal.ResumeLayout(false);
             this.mnsPrincipal.PerformLayout();
@@ -238,10 +298,15 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel itsUsuarioLogado;
         private System.Windows.Forms.ToolStrip barraTarefas;
-        private System.Windows.Forms.ToolStripButton tsbCadastrar;
         private System.Windows.Forms.ToolStripButton itsListarUsuarios;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer relogio;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
     }
 }

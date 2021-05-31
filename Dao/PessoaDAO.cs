@@ -11,7 +11,7 @@ namespace Dao
     public class PessoaDAO
     {
         //Caminho completo com Diretório de nome do Arquivo
-        String path = @"C:\Users\Thiago G Ramos\source\repos\AppAula_2021_1\bd.csv";
+        String path = @"C:\Users\domin\source\repos\AppAula_2021_1\bdPessoa.csv";
         
         public Boolean SalvarPessoaNoArquivo(Pessoa _pessoa)
         {
@@ -23,16 +23,9 @@ namespace Dao
 
                 escritor.Write(_pessoa.CPF + ";");
                 escritor.Write(_pessoa.Nome + ";");
-                escritor.Write(_pessoa.Cel + ";");
+                escritor.Write(_pessoa.Idade + ";");
                 escritor.Write(_pessoa.Email + ";");
-                escritor.Write(_pessoa.EnderecoPadrao.TipoEnd + ";");
-                escritor.Write(_pessoa.EnderecoPadrao.Logradouro + ";");
-                escritor.Write(_pessoa.EnderecoPadrao.Estado + ";");
-                escritor.Write(_pessoa.EnderecoPadrao.Cidade + ";");
-                escritor.Write(_pessoa.EstadoCivil + ";");
-                escritor.Write(_pessoa.Animais + ";");
-                escritor.Write(_pessoa.Filhos + ";");
-                escritor.Write(_pessoa.Fumante + ";");
+                escritor.Write(_pessoa.Endereco + ";");
 
                 //Preparar o arquivo para a próxima escrita, ou seja, adicionar quebra de linha
                 escritor.WriteLine();
@@ -49,9 +42,9 @@ namespace Dao
             return resultado;
         }
     
-        public Dictionary<Int64, Pessoa> ListarPessoasDoArquivo()
+        public Dictionary<String, Pessoa> ListarPessoasDoArquivo()
         {
-            Dictionary<Int64, Pessoa> tabelaPessoas = new Dictionary<Int64, Pessoa>();
+            Dictionary<String, Pessoa> tabelaPessoas = new Dictionary<String, Pessoa>();
             try
             {
                 StreamReader leitor = new StreamReader(path);
@@ -68,19 +61,12 @@ namespace Dao
 
                     Pessoa p = new Pessoa();
 
-                    p.CPF = Convert.ToInt64(campos[0]);
+                    p.CPF = campos[0];
                     p.Nome = campos[1];
-                    p.Cel = campos[2];
+                    p.Idade = Convert.ToInt32(campos[2]);
                     p.Email = campos[3];
-                    p.EnderecoPadrao.TipoEnd = Convert.ToInt32(campos[4]);
-                    p.EnderecoPadrao.Logradouro = campos[5];
-                    p.EnderecoPadrao.Estado = Convert.ToInt32(campos[6]);
-                    p.EnderecoPadrao.Cidade = Convert.ToInt32(campos[7]);
-                    p.EstadoCivil = Convert.ToInt32(campos[8]);
-                    p.Filhos = Convert.ToBoolean(campos[9]);
-                    p.Animais = Convert.ToBoolean(campos[10]);
-                    p.Fumante = Convert.ToBoolean(campos[11]);
-
+                    p.Endereco = campos[4];
+                    
                     tabelaPessoas.Add(p.CPF, p);
                 }
 
@@ -95,17 +81,3 @@ namespace Dao
         }
     }
 }
-/*
-if (campos[8].Equals("0"))
-{
-    p.EstadoCivil = 0;
-}
-else if (campos[8].Equals("1"))
-{
-    p.EstadoCivil = 1;
-}
-else if (campos[8].Equals("2"))
-{
-    p.EstadoCivil = 2;
-}
-*/

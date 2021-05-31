@@ -71,7 +71,7 @@
             this.txbSenha.PasswordChar = '*';
             this.txbSenha.Size = new System.Drawing.Size(179, 20);
             this.txbSenha.TabIndex = 3;
-            this.txbSenha.Text = "thiago";
+            this.txbSenha.Text = "willian";
             this.txbSenha.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txbSenha_MouseClick);
             // 
             // txbUsuario
@@ -80,7 +80,7 @@
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(179, 20);
             this.txbUsuario.TabIndex = 2;
-            this.txbUsuario.Text = "thiago";
+            this.txbUsuario.Text = "willian";
             this.txbUsuario.TextChanged += new System.EventHandler(this.txbUsuario_TextChanged);
             // 
             // label2

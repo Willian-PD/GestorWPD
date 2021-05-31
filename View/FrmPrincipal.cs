@@ -44,16 +44,51 @@ namespace View
             }
         }
 
-        private void tsbCadastrar_Click(object sender, EventArgs e)
-        {
-            FrmCadPessoa form = new FrmCadPessoa();
-
-            form.Show();
-        }
-
         private void itsListarUsuarios_Click(object sender, EventArgs e)
         {
-            FrmListPessoa f = new FrmListPessoa();
+            FrmPessoa f = new FrmPessoa();
+
+            f.ShowDialog();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FrmCliente f = new FrmCliente();
+
+            f.ShowDialog();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            FrmProduto f = new FrmProduto();
+
+            f.ShowDialog();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            FrmEstoque f = new FrmEstoque();
+
+            f.ShowDialog();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            FrmVenda f = new FrmVenda();
+
+            f.ShowDialog();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            FrmCompra f = new FrmCompra();
+
+            f.ShowDialog();
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            FrmFuncionario f = new FrmFuncionario();
 
             f.ShowDialog();
         }
